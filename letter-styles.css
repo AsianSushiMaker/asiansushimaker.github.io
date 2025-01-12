@@ -1,0 +1,107 @@
+/* Global reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
+    flex-direction: column; /* Stack items vertically */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    position: relative;
+    text-align: center; /* Default to center-align for the page */
+}
+
+/* Centered text for the letter title */
+.letter {
+    text-align: center;  /* Center-align the title */
+    font-size: 3rem;
+    color: #ff3366;
+    animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation */
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+/* Center the entire container */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 10px;
+}
+
+/* Left-aligned text for the letter content */
+.letter-text {
+    font-size: 1.5rem;
+    color: #ff3366;
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation to the letter text */
+}
+
+/* Button (Optional for navigation) */
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff3366;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0px;
+    animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation */
+}
+
+button:hover {
+    background-color: #ff6699;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Floating hearts animation */
+.heart {
+    position: absolute;
+    width: 60px; /* Size of the hearts */
+    height: 60px;
+    opacity: 1;
+    animation: floatUp 4s forwards; /* Move hearts upwards and fade them out */
+    pointer-events: none; /* Prevent hearts from interfering with other elements */
+}
+
+/* Floating effect for hearts */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150px); /* Move hearts upwards more */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* Add this section for styling the countdown timer */
+#countdown {
+    font-size: 2rem;
+    color: #ff3366;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
